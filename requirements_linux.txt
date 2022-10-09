@@ -1,0 +1,46 @@
+//
+// Copyright (C) 2022 Bedirhan KURT. All Rights Reserved.
+// Copyright (C) 2022 Beru "Stella" Hinode on behalf of Bedirhan KURT. All Rights Reserved.
+//
+// SPDX-License-Identifier: GPL-2.0-only
+//
+
+// This script is a self-made sample with lots of experimentation and
+// researches to be submitted as part of assignment in Recep Tayyip
+// Erdogan University, Computer Engineering Department. It is designed
+// to do as the requested assignment does and emails them to
+// windowz414@1337.lgbt as proof. Check relevant platform's
+// requirements.txt file for more info about dependencies and
+// compatibility. This assignment will stay FOSS (Free and Open Source
+// Software) and be provided in "AS IS" basis without any guarantees.
+// Any kinds of contribution, such as forks, PRs, Issues, are welcome
+// as long as it has the intention of constructive critisism or actual
+// contribution to source code. This piece of code, in no way, reflects
+// any of my plans for current and future projects and is meant solely
+// as a homework/assignment.
+
+// This text file provides requirements for when you run the GNU/Linux
+// shell script. One of them being unmet means you might face unknown
+// issues, although we work hard to reduce dependencies to only the
+// ones provided in all GNU/Linux distributions would ship as of
+// the date of code.
+
+Unsupported GNU/Linux distributions (if any);
+1-
+
+Subsystem support type (Keep only the ones you need. Remove the rest.);
+- Unsupported
+- WSL
+- Pseudo-root (Proot)
+- Change-root (CHroot)
+- Fakeroot/Fakesudo
+
+Shell support type (Keep only the ones you need. Remove the rest.);
+- Raw Linux shell (sh)
+- Bash
+- ZSH
+- Busybox (Strictly needs to be tested on Debian's recovery mode or Debian installer's shell!)
+- Toybox (Strictly needs to be tested on custom recoveries on Android devices!)
+
+Software/Package dependencies not provided by a bare-bone distro;
+1- 
