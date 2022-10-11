@@ -18,3 +18,42 @@
 # contribution to source code. This piece of code, in no way, reflects
 # any of my plans for current and future projects and is meant solely
 # as a homework/assignment.
+
+# Function approach will be a little easier and cause less load over
+# file buffer.
+
+function collectinfo(){
+    # Get username
+    echo "Username: $(whoami)"
+
+    # Get hostname
+    echo "Hostname: $(uname -n)"
+
+    # Dump network stats
+    echo "----- Dump network configuration start -----"
+    ifconfig
+    echo "-----  Dump network configuration end  -----"
+
+    # Get available memory status
+    cat /proc/meminfo | grep Free
+
+    # Dump available disk spaces for each mountpoint
+    echo "----- Dump local disks, free spaces and mountpoints start -----"
+    df -lh --output=source,fstype,avail,target
+    echo "-----  Dump local disks, free spaces and mountpoints end  -----"
+
+    # Get current working directory
+    pwd
+
+    # Get all running processes (includes system ones)
+    echo "----- Dump running processes start -----"
+    ps -A
+    echo "-----  Dump running processes end  -----"
+
+    # Get network stats - DEPENDS ON `net-tools`!
+    echo "----- Dump network stats start -----"
+    netstat
+    echo "-----  Dump network stats end  -----"
+}
+
+collectinfo > client-device-information.txt

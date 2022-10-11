@@ -25,22 +25,21 @@
 // ones provided in all GNU/Linux distributions would ship as of
 // the date of code.
 
-Unsupported GNU/Linux distributions (if any);
-1-
+Unsupported GNU/Linux distributions;
+1- Those not shipping any alternatives for net-tools Debian package.
 
-Subsystem support type (Keep only the ones you need. Remove the rest.);
-- Unsupported
+Subsystem support type;
 - WSL
 - Pseudo-root (Proot)
 - Change-root (CHroot)
 - Fakeroot/Fakesudo
 
-Shell support type (Keep only the ones you need. Remove the rest.);
+Shell support type;
 - Raw Linux shell (sh)
 - Bash
-- ZSH
+- ZSH (Untested)
 - Busybox (Strictly needs to be tested on Debian's recovery mode or Debian installer's shell!)
 - Toybox (Strictly needs to be tested on custom recoveries on Android devices!)
 
 Software/Package dependencies not provided by a bare-bone distro;
-1- 
+1- `net-tools` Debian package or one of its equivalents
