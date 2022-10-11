@@ -19,3 +19,36 @@ REM as long as it has the intention of constructive critisism or actual
 REM contribution to source code. This piece of code, in no way, reflects
 REM any of my plans for current and future projects and is meant solely
 REM as a homework/assignment.
+
+REM Get username and print into the text file.
+ECHO Username: %USERNAME% > client-device-information.txt
+
+REM Get hostname and print into the text file.
+ECHO Hostname: %COMPUTERNAME% >> client-device-information.txt
+
+REM Get ipconfig output into the text file.
+ECHO ----- Network configuration dump start ----- >> client-device-information.txt
+IPCONFIG >> client-device-information.txt
+ECHO -----  Network configuration dump end  ----- >> client-device-information.txt
+
+REM Get available physical and virtual memory and print into the text
+REM file.
+REM TODO: Think about other locales and find a more global method for
+REM       this.
+SYSTEMINFO|FIND "Available" >> client-device-information.txt
+
+REM Get available disk space for all local disks installed.
+ECHO ----- Dump local disks and free spaces start ----- >> client-device-information.txt
+WMIC /NODE:"%COMPUTERNAME%" LOGICALDISK WHERE DRIVETYPE="3" GET DeviceID,VolumeName,FreeSpace >> client-device-information.txt
+ECHO -----  Dump local disks and free spaces end  ----- >> client-device-information.txt
+
+REM Get current directory and print it in.
+DIR|FIND "Directory of" >> client-device-information.txt
+
+REM Get all running processes and services.
+TASKLIST >> client-device-information.txt
+
+REM Get all opened ports and print them in.
+ECHO ----- Dump network stats start ----- >> client-device-information.txt
+NETSTAT >> client-device-information.txt
+ECHO -----  Dump network stats end  ----- >> client-device-information.txt

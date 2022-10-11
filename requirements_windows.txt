@@ -25,7 +25,6 @@
 // ones provided in all Windows versions Microsoft would support as of
 // the date of code.
 
-Windows versions supported: 
+Windows versions supported: Windows XP and up expected, Windows 10 and up guaranteed.
 
-Software dependencies not provided by system;
-1- 
+Software dependencies not provided by system: None.
